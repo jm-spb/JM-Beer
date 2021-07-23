@@ -1,0 +1,50 @@
+@import '../../config';
+
+#main-footer {
+  color: #ffffff;
+  height: 150px;
+
+  .footer-content {
+    padding: 1rem 0.5rem;
+    display: grid;
+    grid-template-areas:
+      'item1 item1 item1'
+      'item2 item2 social';
+
+    .item1 {
+      grid-area: item1;
+      text-align: center;
+
+      font-weight: 100;
+      margin-bottom: 1rem;
+      font-stretch: ultra-condensed;
+    }
+    .item2 {
+      grid-area: item2;
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+
+    .social {
+      grid-area: social;
+      text-align: end;
+
+      .width {
+        width: 1.3rem;
+      }
+
+      .round {
+        margin-right: 1rem;
+        border: 2px #fff solid;
+        border-radius: 50%;
+        padding: 0.5rem;
+
+        &:hover {
+          background-color: $orange-color;
+          transition: all 0.5s;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

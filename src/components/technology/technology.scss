@@ -1,0 +1,79 @@
+@import '../../config';
+
+#tech {
+  margin-top: 1rem;
+
+  button {
+    border: none;
+    background: $bg-button;
+    background-size: cover;
+  }
+
+  .tech-heading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+
+  .images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+
+  i {
+    font-family: Times, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h5 {
+    color: $heading-color;
+  }
+
+  .tech-content {
+    margin-top: 3rem;
+
+    a {
+      color: $pink-color;
+
+      &:visited {
+        color: $pink-color;
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    ol {
+      list-style-type: none;
+
+      li {
+        font-size: 2rem;
+        margin: 2rem auto;
+      }
+    }
+
+    ul {
+      list-style-position: inside;
+      color: #000000;
+
+      li {
+        font-family: Times, sans-serif;
+        font-size: 1.5rem;
+        line-height: 1.4;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import 'config';
+
+// GENERAL STYLES
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-family: Times, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+body {
+  font-family: Cantarell, sans-serif;
+  line-height: 1.6;
+  background: $bg-image;
+  font-size: 1.1rem;
+}
+
+h1,
+h2,
+h3,
+h5 {
+  font-family: Cantarell, sans-serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  &:visited {
+    color: #fff;
+  }
+}
+
+img {
+  width: 100%;
+}

@@ -1,0 +1,71 @@
+@import '../../config';
+
+.wrap {
+  height: 75px;
+}
+
+#logo {
+  margin-top: 0.2rem;
+  width: 40px;
+  height: 40px;
+}
+
+// MAIN NAV
+#main-nav {
+  height: 75px;
+  background-color: $main-color;
+  position: fixed;
+  opacity: 0.8;
+  width: 100%;
+  transition: 1s;
+  z-index: 2;
+
+  &.top {
+    background: transparent;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+
+    .logo {
+      display: flex;
+    }
+
+    h1 {
+      font-family: 'Qwigley';
+      color: $orange-color;
+      font-size: 3rem;
+      margin: 1.1rem 0 0 0.5rem;
+      line-height: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+    }
+
+    li {
+      padding: 1rem 1.5rem;
+    }
+
+    a {
+      font-weight: 300;
+      letter-spacing: 2px;
+      font-size: 1rem;
+      border-bottom: 3px transparent solid;
+      padding-bottom: 0.5rem;
+      transition: border-color 0.5s;
+
+      &:hover {
+        border-color: $yellow-color;
+      }
+
+      &.current {
+        border-color: $pink-color;
+      }
+    }
+  }
+}

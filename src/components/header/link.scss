@@ -1,0 +1,18 @@
+@import '../../config';
+
+a {
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  border-bottom: 3px transparent solid;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.5s;
+
+  &:hover {
+    border-color: $yellow-color;
+  }
+
+  &:focus {
+    border-color: $pink-color;
+  }
+}
