@@ -38,9 +38,7 @@ const Technology = () => {
             className={`back_to_top ${up}`}
             title="Наверх"
             onClick={backToTop}
-          >
-            {/* <img src={IMAGES.upToTop} alt="" /> */}
-          </button>
+          ></button>
 
           <div className="tech-heading ">
             <h1 className="bottom-line">ТЕХНОЛОГИЯ ИЗГОТОВЛЕНИЯ</h1>

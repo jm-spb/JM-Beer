@@ -1,20 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import './link.scss';
 
 const Link = ({ href, children }) => {
-  const [current, setCurrent] = useState('');
-
   const onClick = (e) => {
     e.preventDefault();
     window.history.pushState({}, '', href);
 
     const navEvent = new PopStateEvent('popstate');
     window.dispatchEvent(navEvent);
-    setCurrent('current');
   };
 
   return (
-    <a onClick={onClick} className={current} href={href}>
+    <a onClick={onClick} href={href}>
       {children}
     </a>
   );

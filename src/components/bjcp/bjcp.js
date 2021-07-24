@@ -127,7 +127,24 @@ const Bjcp = () => {
           </i>
         </p>
         <br />
-        <div className="bjcp-head">
+        <div className="table">
+          <div className="category">
+            <span>Категория</span>
+            <ul onClick={showStyle}>{listCategory}</ul>
+          </div>
+          <div className="style">
+            <span>Стиль</span>
+            <ul>
+              {loading ? 'loading...' : null}
+              {style}
+            </ul>
+          </div>
+          <div className="discription">
+            <span>Описание стиля</span>
+            <div className="disc-text">{disc}</div>
+          </div>
+        </div>
+        {/* <div className="bjcp-head">
           <div className="head-category"></div>
           <ol>
             <li>Категория</li>
@@ -137,13 +154,13 @@ const Bjcp = () => {
         </div>
         <div className="table-area">
           <div className="flex">
-            {/* СТОЛБЕЦ КАТЕГОРИЯ ПИВА */}
+            
             <div className="table-cells flex-column">
               <ul onClick={showStyle}>{listCategory}</ul>
             </div>
           </div>
 
-          {/* СТОЛБЕЦ СТИЛИ ПИВА */}
+         
           <div id="style-column">
             <div id="style" className="flex-column">
               <ul>
@@ -153,11 +170,11 @@ const Bjcp = () => {
             </div>
           </div>
 
-          {/* ОПИСАНИЕ СТИЛЕЙ ПИВА */}
+          
           <div id="discription" className="flex-column">
             <div>{disc}</div>
           </div>
-        </div>
+        </div> */}
       </section>
     </React.Fragment>
   );

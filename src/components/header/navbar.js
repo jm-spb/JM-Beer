@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from './link';
 import './navbar.scss';
 import logo from '../../assets/images/logo.png';
