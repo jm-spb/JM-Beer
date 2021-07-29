@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import firebase from '../../firebase';
 import Navbar from '../header/navbar';
+import Li from './li';
 import './bjcp.scss';
 
 const Bjcp = () => {
@@ -96,10 +97,6 @@ const Bjcp = () => {
       });
   };
 
-  const listCategory = beerCategory.map((beer) => {
-    return <li key={beer}>{beer}</li>;
-  });
-
   return (
     <React.Fragment>
       <Navbar />
@@ -130,7 +127,9 @@ const Bjcp = () => {
         <div className="table">
           <div className="category">
             <span>Категория</span>
-            <ul onClick={showStyle}>{listCategory}</ul>
+            <ul onClick={showStyle}>
+              <Li items={beerCategory} />
+            </ul>
           </div>
           <div className="style">
             <span>Стиль</span>
