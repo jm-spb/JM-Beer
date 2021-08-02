@@ -25,7 +25,7 @@ const Technology = () => {
     window.onscroll = () => {
       trackScroll();
     };
-  }, []);
+  }, [up]);
 
   return (
     <React.Fragment>
