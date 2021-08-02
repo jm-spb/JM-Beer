@@ -3,10 +3,6 @@
   .home-heading {
     display: flex;
     justify-content: center;
-    visibility: hidden;
-    opacity: 0;
-    transform: translate(0, 100px);
-    transition: all 0.5s ease-in-out;
     margin-bottom: 4rem;
 
     h1 {
@@ -26,10 +22,6 @@
   .images {
     text-align: center;
     margin: 2rem 0 2rem 0;
-    visibility: hidden;
-    opacity: 0;
-    transform: translate(0, 100px);
-    transition: all 0.5s ease-in-out;
     cursor: pointer;
     img {
       width: 25%;
@@ -41,7 +33,3 @@
     opacity: 1;
   }
 }
-
-// .wrap {
-//   height: 0;
-// }
