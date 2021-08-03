@@ -5,6 +5,7 @@ import { SRLWrapper } from 'simple-react-lightbox';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import './main.scss';
+import BeerCardShort from './beer-card-short';
 
 const Main = () => {
   const [navTransparent, setNavTransparent] = useState('top');
@@ -17,7 +18,7 @@ const Main = () => {
 
       Aos.init({ duration: 1500 });
     };
-  });
+  }, [navTransparent]);
 
   return (
     <React.Fragment>
@@ -37,6 +38,9 @@ const Main = () => {
 
           <div data-aos="fade-up" className="home-heading">
             <h1 className="bottom-line">Последние дегустации</h1>
+          </div>
+          <div data-aos="fade-up">
+            <BeerCardShort />
           </div>
         </div>
       </section>

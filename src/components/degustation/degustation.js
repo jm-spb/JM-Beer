@@ -5,6 +5,8 @@ import firebase from '../../firebase';
 
 const Degustation = () => {
   const [cards, setCards] = useState(null);
+  const [showDisc, setShowDisc] = useState(false);
+
   const db = firebase.firestore();
 
   useEffect(() => {
@@ -23,15 +25,15 @@ const Degustation = () => {
               <div className="beer-grid">
                 <div className="grid-item1">Классификация по BJCP</div>
                 <div className="grid-item2">{doc.data().bjcp}</div>
-                <div className="grid-item1 ml">Оценка Untappd</div>
+                <div className="grid-item1">Оценка Untappd</div>
                 <div className="grid-item2">{`${doc.data().untappd} из 5`}</div>
                 <div className="grid-item1">Алкоголь</div>
                 <div className="grid-item2">{`${doc.data().abv}% об.`}</div>
-                <div className="grid-item1 ml">Плотность</div>
+                <div className="grid-item1">Плотность</div>
                 <div className="grid-item2">{`${doc.data().fg}%`}</div>
                 <div className="grid-item1">Горечь (IBU)</div>
                 <div className="grid-item2">{doc.data().ibu}</div>
-                <div className="grid-item1 ml">Тара</div>
+                <div className="grid-item1">Тара</div>
                 <div className="grid-item2">{doc.data().pack}</div>
               </div>
 
@@ -45,14 +47,23 @@ const Degustation = () => {
               </div>
               <div className="beer-discription">
                 <div className="disc-head">Описание</div>
-                <div className="disc-text">{doc.data().disc}</div>
+
+                {showDisc ? (
+                  <div className="disc-text">{doc.data().disc}</div>
+                ) : null}
+                <span
+                  className="show-disc"
+                  onClick={() => setShowDisc(!showDisc)}
+                >
+                  {showDisc ? 'Скрыть' : 'Показать'}
+                </span>
               </div>
             </div>
           );
         });
         setCards(beerCardsList);
       });
-  }, [db]);
+  }, [db, showDisc]);
 
   return (
     <React.Fragment>
