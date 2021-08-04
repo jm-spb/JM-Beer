@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer id="main-footer">
+    <footer className="main-footer">
       <div className="footer-content container">
         <h1 className="item1">
           18+ ЧРЕЗМЕРНОЕ УПОТРЕБЛЕНИЕ АЛКОГОЛЯ ВРЕДИТ ВАШЕМУ ЗДОРОВЬЮ

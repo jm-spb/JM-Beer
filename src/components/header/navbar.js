@@ -6,7 +6,7 @@ import logo from '../../assets/images/logo.png';
 const Navbar = ({ top }) => {
   return (
     <div className="wrap">
-      <nav id="main-nav" className={top}>
+      <nav className={`main-nav ${top}`}>
         <div className="container">
           <div className="logo">
             <img src={logo} alt="JMlogo" id="logo" />

@@ -1,5 +1,5 @@
 @import '../../config';
-#home {
+.home {
   .home-heading {
     display: flex;
     justify-content: center;
@@ -33,3 +33,5 @@
     opacity: 1;
   }
 }
+
+@import 'main-media';

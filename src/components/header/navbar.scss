@@ -11,7 +11,7 @@
 }
 
 // MAIN NAV
-#main-nav {
+.main-nav {
   height: 75px;
   background-color: $main-color;
   position: fixed;
@@ -69,3 +69,5 @@
     }
   }
 }
+
+@import 'navbar-media';

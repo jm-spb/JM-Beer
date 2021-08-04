@@ -23,7 +23,7 @@ const Main = () => {
   return (
     <React.Fragment>
       <Header top={navTransparent} />
-      <section id="home">
+      <section className="home">
         <div className="container content">
           <div data-aos="fade-up" className="home-heading">
             <h1 className="bottom-line">Классификация сортов пива</h1>

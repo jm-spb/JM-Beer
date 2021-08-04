@@ -1,0 +1,30 @@
+// Tablets and smaller
+@media (max-width: 850px) {
+  .main-footer {
+    height: 18rem;
+
+    .footer-content {
+      grid-template-areas:
+        'item1 item1 item1'
+        'item2 item2 item2'
+        'social social social';
+
+      .item2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .social {
+        text-align: center;
+      }
+    }
+  }
+}
+// Smartphone
+@media (max-width: 500px) {
+  .main-footer {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}

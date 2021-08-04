@@ -1,0 +1,56 @@
+// Tablets and smaller
+@media (max-width: 850px) {
+  .header-home {
+    .showcase {
+      .video-container {
+        display: none;
+      }
+
+      .title {
+        margin-top: 7rem;
+      }
+    }
+  }
+}
+
+// Smartphone
+@media (max-width: 500px) {
+  .header-home {
+    height: 40rem;
+
+    .showcase {
+      .title {
+        margin-top: 20rem;
+
+        h1 {
+          font-size: 25px;
+        }
+
+        h2 {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+// Small smartphones
+
+// Landscape
+@media (max-height: 450px) {
+  .header-home {
+    height: 120vh;
+
+    .showcase {
+      .title {
+        h1 {
+          font-size: 40px;
+        }
+
+        h2 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}

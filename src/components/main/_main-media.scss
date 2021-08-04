@@ -1,0 +1,55 @@
+// Tablets and smaller
+@media (max-width: 850px) {
+  .home {
+    .content {
+      padding: 3rem 0.5rem;
+
+      .home-heading {
+        h1 {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+}
+// Smartphone
+@media (max-width: 500px) {
+  .home {
+    .content {
+      .home-heading {
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+
+      .short-beer-card {
+        padding: 1rem 1rem;
+        .short-beer-name {
+          span {
+            font-size: 1.5rem;
+          }
+          i {
+            font-size: 0.9rem;
+          }
+        }
+
+        .short-beer-grid {
+          .short-grid-item1 {
+            font-size: 0.9rem;
+          }
+          .short-grid-item2 {
+            font-size: 0.9rem;
+          }
+        }
+
+        .short-beer-date-flavour {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+// Small smartphones
+
+// Landscape

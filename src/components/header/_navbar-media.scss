@@ -1,0 +1,60 @@
+// Tablets and smaller
+@media (max-width: 850px) {
+  .wrap {
+    height: 9rem;
+  }
+  .main-nav {
+    height: 9rem;
+    opacity: 1;
+
+    &.top {
+      background: $main-color;
+    }
+    .container {
+      flex-direction: column;
+      padding: 1rem;
+      margin-bottom: 2rem;
+
+      .logo {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+// Smartphone
+@media (max-width: 500px) {
+  .wrap {
+    height: 20rem;
+  }
+  .main-nav {
+    height: 20rem;
+
+    #logo {
+      width: 30px;
+      height: 30px;
+    }
+
+    .logo {
+      h1 {
+        font-size: 2rem;
+        margin-top: 0.8rem;
+      }
+    }
+
+    ul {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .container {
+      a {
+        transition: none;
+        border-bottom: 1px solid lightgray;
+        &:hover {
+          color: $yellow-color;
+        }
+      }
+    }
+  }
+}

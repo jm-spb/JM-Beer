@@ -17,13 +17,10 @@
       color: $main-color;
       font-weight: bold;
       letter-spacing: 2px;
-      &.small {
-        font-size: 1.7rem;
-      }
     }
 
     i {
-      font-weight: 300;
+      font-size: 1.5rem;
     }
   }
 
@@ -72,7 +69,6 @@
       border: 1px solid lightgray;
       border-left: none;
       padding: 1rem;
-
       letter-spacing: 1px;
     }
 

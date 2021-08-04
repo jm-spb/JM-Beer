@@ -1,6 +1,6 @@
 @import '../../config';
 
-#main-footer {
+.main-footer {
   color: #ffffff;
   height: 150px;
 
@@ -48,3 +48,5 @@
     }
   }
 }
+
+@import 'footer-media';
