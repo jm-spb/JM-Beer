@@ -34,8 +34,6 @@
   }
 }
 
-// Small smartphones
-
 // Landscape
 @media (max-height: 450px) {
   .header-home {
@@ -52,5 +50,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-height: 320px) {
+  .header-home {
+    height: 160vh;
   }
 }
