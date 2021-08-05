@@ -1,0 +1,46 @@
+// Tablets and smaller
+@media (max-width: 850px) {
+  .bjcp.container.content {
+    padding: 2rem 0.5rem;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    .table {
+      grid-template-columns: auto;
+
+      ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        li {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// Smartphone
+@media (max-width: 500px) {
+  .bjcp.container.content {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .table {
+      ul li {
+        font-size: 0.9rem;
+      }
+
+      .disc-text {
+        padding: 1rem 0.5rem;
+      }
+    }
+  }
+}

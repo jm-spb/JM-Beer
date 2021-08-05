@@ -68,7 +68,7 @@ const Degustation = () => {
   return (
     <React.Fragment>
       <Navbar />
-      <section id="degustation" className="container content">
+      <section className="degustation container content">
         <div className="degustation-heading ">
           <h1 className="bottom-line">ДЕГУСТАЦИИ</h1>
         </div>

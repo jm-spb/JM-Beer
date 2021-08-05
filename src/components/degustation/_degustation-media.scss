@@ -1,0 +1,57 @@
+// Tablets and smaller
+@media (max-width: 850px) {
+  .degustation.container.content {
+    padding: 2rem 1rem;
+    .degustation-heading {
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .beer-card {
+      .beer-name {
+        span {
+          font-size: 2rem;
+        }
+        i {
+          font-size: 1rem;
+        }
+      }
+
+      .grid-item1,
+      .grid-item2,
+      .date,
+      .flavour,
+      .disc-head,
+      .show-disc,
+      .disc-text {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// Smartphone
+@media (max-width: 500px) {
+  .degustation.container.content {
+    padding: 2rem 0.5rem;
+    .beer-card {
+      .beer-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+  }
+}
+
+// Small smartphones
+@media (max-width: 370px) {
+  .degustation.container.content {
+    padding: 2rem 0rem;
+    .beer-card {
+      padding: 1rem 0.5rem;
+      .beer-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+  }
+}

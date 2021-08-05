@@ -100,7 +100,7 @@ const Bjcp = () => {
   return (
     <React.Fragment>
       <Navbar />
-      <section id="bjcp" className="container content">
+      <section className="bjcp container content">
         <div className="bjcp-heading ">
           <h1 className="bottom-line">
             Классификация пива по <br /> стандарту BJCP(2015)

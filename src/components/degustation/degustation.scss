@@ -1,7 +1,6 @@
 @import '../../config';
 
-#degustation {
-  margin-top: 1rem;
+.degustation.container.content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,13 +34,6 @@
       color: $main-color;
       font-weight: bold;
       letter-spacing: 2px;
-      &.small {
-        font-size: 1.7rem;
-      }
-    }
-
-    i {
-      font-weight: 300;
     }
   }
 
@@ -130,3 +122,5 @@
     }
   }
 }
+
+@import 'degustation-media';

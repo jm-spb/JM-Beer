@@ -1,8 +1,6 @@
 @import '../../config';
 
-#bjcp {
-  margin-top: 1rem;
-
+.bjcp.container.content {
   a {
     color: $pink-color;
 
@@ -101,3 +99,5 @@
     }
   }
 }
+
+@import 'bjcp-media';

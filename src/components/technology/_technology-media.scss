@@ -1,0 +1,44 @@
+// Tablets and smaller
+@media (max-width: 850px) {
+  .tech.container.content {
+    padding: 2rem 1rem;
+    .tech-heading {
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .tech-content {
+      h2,
+      h3,
+      h5,
+      p,
+      i,
+      li {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+// Smartphone
+@media (max-width: 500px) {
+  .tech.container.content {
+    .back_to_top {
+      bottom: 2rem;
+      right: 1rem;
+    }
+
+    .tech-heading {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .img_discription {
+      i {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

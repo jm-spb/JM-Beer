@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Navbar from '../header/navbar';
 import './technology.scss';
 import IMAGES from '../../images';
@@ -7,7 +7,7 @@ import { SRLWrapper } from 'simple-react-lightbox';
 const Technology = () => {
   const [up, setUp] = useState('');
 
-  const trackScroll = () => {
+  window.onscroll = () => {
     const scrolled = window.pageYOffset;
     const coords = document.documentElement.clientHeight;
     scrolled > coords ? setUp('show') : setUp('');
@@ -21,18 +21,12 @@ const Technology = () => {
     }
   };
 
-  useEffect(() => {
-    window.onscroll = () => {
-      trackScroll();
-    };
-  }, [up]);
-
   return (
     <React.Fragment>
       <Navbar />
 
       <SRLWrapper>
-        <section id="tech" className="container content">
+        <section className="tech container content">
           {/* Кнопка наверх */}
           <button
             className={`back_to_top ${up}`}
@@ -79,7 +73,7 @@ const Technology = () => {
                 <img src={IMAGES.solod_3} alt="Пример солода для пивоварения" />
               </div>
               <div className="img_discription">
-                <h5>Примеры солода для пивоварения (фото кликабельны) </h5>
+                <i>Примеры солода для пивоварения (фото кликабельны) </i>
               </div>
               <li>
                 <h5>Хмель</h5>
@@ -126,7 +120,7 @@ const Technology = () => {
                 <img src={IMAGES.hop_3} alt="Некоторые виды хмеля" />
               </div>
               <div className="img_discription">
-                <h5>Примеры хмеля для пивоварения (фото кликабельны)</h5>
+                <i>Примеры хмеля для пивоварения (фото кликабельны)</i>
               </div>
               <br />
               <br />
@@ -173,7 +167,7 @@ const Technology = () => {
                 alt="Вкусы и ароматы популярных сортов хмеля"
               />
               <div className="img_discription">
-                <h5>Вкусы и ароматы популярных сортов хмеля </h5>
+                <i>Вкусы и ароматы популярных сортов хмеля </i>
               </div>
               <br />
               <p>
@@ -229,7 +223,7 @@ const Technology = () => {
                 <img src={IMAGES.hop_simcoe} alt="Хмель Симкое" />
               </div>
               <div className="img_discription">
-                <h5>Некоторые виды хмелей (фото кликабельны) </h5>
+                <i>Некоторые виды хмелей (фото кликабельны) </i>
               </div>
               <li>
                 <h5>Вода</h5>
