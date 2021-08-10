@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import beerClassify from '../../assets/images/BEER.png';
+import beerClassify_thumbnail from '../../assets/images/BEER_thumbnail.webp';
 import Header from '../header/header';
 import { SRLWrapper } from 'simple-react-lightbox';
 import Aos from 'aos';
@@ -30,7 +31,15 @@ const Main = () => {
           </div>
           <SRLWrapper>
             <div data-aos="fade-up" className="images">
-              <img src={beerClassify} alt="Классификация пива" />
+              <a href={beerClassify}>
+                <img
+                  src={beerClassify_thumbnail}
+                  width="290"
+                  height="450"
+                  loading="lazy"
+                  alt="Классификация пива"
+                />
+              </a>
             </div>
           </SRLWrapper>
 
