@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import firebase from '../../firebase';
+// import firebase from '../../firebase';
+import db from '../../firebase';
+import { collection, getDocs } from 'firebase/firestore/lite';
 import Navbar from '../header/navbar';
 import Li from './li';
 import './bjcp.scss';
@@ -9,7 +11,7 @@ const Bjcp = () => {
   const [disc, setDisc] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const db = firebase.firestore();
+  // const db = firebase.firestore();
 
   const beerCategory = [
     'Светлый лагер',
@@ -82,19 +84,18 @@ const Bjcp = () => {
   const showStyle = (e) => {
     setLoading(true);
     setStyle('');
-    db.collection(e.target.innerText)
-      .get()
-      .then((snapshot) => {
-        const list = snapshot.docs.map((doc) => {
-          return (
-            <li key={doc.id} onClick={() => showDisc(doc)}>
-              {doc.id}
-            </li>
-          );
-        });
-        setLoading(false);
-        setStyle(list);
+    const snap = getDocs(collection(db, e.target.innerText));
+    snap.then((snapshot) => {
+      const list = snapshot.docs.map((doc) => {
+        return (
+          <li key={doc.id} onClick={() => showDisc(doc)}>
+            {doc.id}
+          </li>
+        );
       });
+      setLoading(false);
+      setStyle(list);
+    });
   };
 
   return (
