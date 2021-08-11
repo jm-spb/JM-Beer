@@ -16,16 +16,17 @@
   }
 
   .images {
+    margin: 1rem 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-items: stretch;
+    align-items: center;
     gap: 0.5rem;
     cursor: pointer;
-  }
 
-  i {
-    font-family: Times, sans-serif;
-    line-height: 1.4;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   h1 {
@@ -33,15 +34,34 @@
     font-size: 2.5rem;
   }
 
-  h1,
-  h2,
-  h3,
-  h5 {
-    color: $heading-color;
-  }
-
   .tech-content {
     margin-top: 3rem;
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      margin-top: 2rem;
+    }
+
+    p {
+      margin-top: 1rem;
+    }
+
+    i {
+      font-family: Times, sans-serif;
+      font-size: 1.3rem;
+    }
+
+    .hop-4 {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
 
     a {
       color: $pink-color;
@@ -51,27 +71,15 @@
       }
     }
 
-    h2 {
-      font-size: 2rem;
-    }
-
-    ol {
-      list-style-type: none;
-
-      li {
-        font-size: 2rem;
-        margin: 2rem auto;
-      }
-    }
-
     ul {
       list-style-position: inside;
-      color: #000000;
+      list-style-type: circle;
 
       li {
         font-family: Times, sans-serif;
         font-size: 1.5rem;
         line-height: 1.4;
+        margin: 0.5rem 0;
       }
     }
   }
