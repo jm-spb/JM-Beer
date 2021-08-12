@@ -34,8 +34,8 @@ const Main = () => {
               <a href={beerClassify}>
                 <img
                   src={beerClassify_thumbnail}
-                  width="290"
-                  height="450"
+                  width="180"
+                  height="320"
                   loading="lazy"
                   alt="Классификация пива"
                 />

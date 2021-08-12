@@ -15,9 +15,9 @@ const Footer = () => {
         <h1 className="item1">
           18+ ЧРЕЗМЕРНОЕ УПОТРЕБЛЕНИЕ АЛКОГОЛЯ ВРЕДИТ ВАШЕМУ ЗДОРОВЬЮ
         </h1>
-        <h3 className="item2">
+        <span className="item2">
           &copy; {new Date().getFullYear()} JM Beer project
-        </h3>
+        </span>
 
         <div className="social">
           <a

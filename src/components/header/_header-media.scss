@@ -1,6 +1,7 @@
 // Tablets and smaller
 @media (max-width: 850px) {
   .header-home {
+    min-height: 100vh;
     .showcase {
       .video-container {
         display: none;
@@ -16,18 +17,33 @@
 // Smartphone
 @media (max-width: 500px) {
   .header-home {
-    height: 40rem;
-
     .showcase {
       .title {
         margin-top: 20rem;
 
         h1 {
-          font-size: 25px;
+          font-size: 2rem;
         }
 
         h2 {
-          font-size: 15px;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Small smartphones
+@media (max-width: 370px) {
+  .header-home {
+    .showcase {
+      .title {
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        h2 {
+          font-size: 1rem;
         }
       }
     }
@@ -42,11 +58,11 @@
     .showcase {
       .title {
         h1 {
-          font-size: 40px;
+          font-size: 2.5rem;
         }
 
         h2 {
-          font-size: 30px;
+          font-size: 2rem;
         }
       }
     }
@@ -55,6 +71,16 @@
 
 @media (max-height: 320px) {
   .header-home {
-    height: 160vh;
+    .showcase {
+      .title {
+        h1 {
+          font-size: 2rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 }

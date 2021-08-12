@@ -48,7 +48,7 @@ const App = () => {
         </React.Suspense>
       </Route>
 
-      <React.Suspense fallback={<span>loading...</span>}>
+      <React.Suspense fallback={<span></span>}>
         <Footer />
       </React.Suspense>
     </>
