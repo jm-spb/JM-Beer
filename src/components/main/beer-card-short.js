@@ -1,22 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import './beer-card-short.scss';
-// import firebase from '../../firebase';
 import db from '../../firebase';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import { collection, getDocs } from 'firebase/firestore/lite';
 
 const BeerCardShort = () => {
   const [cardsShort, setCardsShort] = useState(null);
-  // const db = firebase.firestore();
-
   const snap = getDocs(collection(db, 'Degustation'));
-  // snap.then((a) => console.log(a.data()));
-  // console.log(snap);
 
   useEffect(() => {
     snap.then((snapshot) => {
       const beerCardsShortList = snapshot.docs.map((doc) => {
         return (
-          <div key={doc.id} className="short-beer-card">
+          <div key={doc.id} data-aos="fade-up" className="short-beer-card">
             <div className="short-beer-name">
               <p>
                 <span>{doc.data().beerName}</span> <br />

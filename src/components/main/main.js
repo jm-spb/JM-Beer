@@ -34,8 +34,8 @@ const Main = () => {
               <a href={beerClassify}>
                 <img
                   src={beerClassify_thumbnail}
-                  width="180"
-                  height="320"
+                  width="200"
+                  height="450"
                   loading="lazy"
                   alt="Классификация пива"
                 />
@@ -48,9 +48,7 @@ const Main = () => {
           <div data-aos="fade-up" className="home-heading">
             <h1 className="bottom-line">Последние дегустации</h1>
           </div>
-          <div data-aos="fade-up">
-            <BeerCardShort />
-          </div>
+          <BeerCardShort />
         </div>
       </section>
     </React.Fragment>
