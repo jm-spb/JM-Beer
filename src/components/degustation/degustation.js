@@ -3,67 +3,35 @@ import Navbar from '../header/navbar';
 import './degustation.scss';
 import db from '../../firebase';
 import { collection, getDocs } from 'firebase/firestore/lite';
+import BeerCard from './beer-card';
 
 const Degustation = () => {
   const [cards, setCards] = useState(null);
-  const [showDisc, setShowDisc] = useState(false);
-
-  // const db = firebase.firestore();
   const snap = getDocs(collection(db, 'Degustation'));
 
   useEffect(() => {
     snap.then((snapshot) => {
       const beerCardsList = snapshot.docs.map((doc) => {
         return (
-          <div key={doc.id} className="beer-card">
-            <div className="beer-name">
-              <p>
-                <span>{doc.data().beerName}</span> <br />
-                <i>{doc.data().factory}</i>
-              </p>
-            </div>
-            <div className="beer-grid">
-              <div className="grid-item1">Классификация по BJCP</div>
-              <div className="grid-item2">{doc.data().bjcp}</div>
-              <div className="grid-item1">Оценка Untappd</div>
-              <div className="grid-item2">{`${doc.data().untappd} из 5`}</div>
-              <div className="grid-item1">Алкоголь</div>
-              <div className="grid-item2">{`${doc.data().abv}% об.`}</div>
-              <div className="grid-item1">Плотность</div>
-              <div className="grid-item2">{`${doc.data().fg}%`}</div>
-              <div className="grid-item1">Горечь (IBU)</div>
-              <div className="grid-item2">{doc.data().ibu}</div>
-              <div className="grid-item1">Тара</div>
-              <div className="grid-item2">{doc.data().pack}</div>
-            </div>
-
-            <div className="beer-date-flavour">
-              <div className="date">{`Дата дегустации: ${
-                doc.data().date
-              }`}</div>
-              <div className="flavour">
-                Основные вкусы: <strong>{doc.data().flavours}</strong>
-              </div>
-            </div>
-            <div className="beer-discription">
-              <div className="disc-head">Описание</div>
-
-              {showDisc ? (
-                <div className="disc-text">{doc.data().disc}</div>
-              ) : null}
-              <span
-                className="show-disc"
-                onClick={() => setShowDisc(!showDisc)}
-              >
-                {showDisc ? 'Скрыть' : 'Показать'}
-              </span>
-            </div>
-          </div>
+          <BeerCard
+            key={doc.id}
+            beerName={doc.data().beerName}
+            factory={doc.data().factory}
+            bjcp={doc.data().bjcp}
+            untappd={doc.data().untappd}
+            abv={doc.data().abv}
+            fg={doc.data().fg}
+            ibu={doc.data().ibu}
+            pack={doc.data().pack}
+            date={doc.data().date}
+            flavours={doc.data().flavours}
+            disc={doc.data().disc}
+          />
         );
       });
       setCards(beerCardsList);
     });
-  }, [showDisc]);
+  }, []);
 
   return (
     <React.Fragment>
