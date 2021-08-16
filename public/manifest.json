@@ -4,7 +4,7 @@
   "display": "standalone",
   "start_url": ".",
   "name": "JM Beer",
-  "short_name": "jm beer",
+  "short_name": "JM Beer",
   "icons": [
     {
       "src": "/images/icon-192x192.png",
@@ -27,7 +27,7 @@
       "type": "image/png"
     },
     {
-      "src": "/images/maskable_icon.png",
+      "src": "/images/maskable_icon_x48.png",
       "sizes": "48x48",
       "type": "image/png",
       "purpose": "any maskable"
