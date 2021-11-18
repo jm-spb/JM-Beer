@@ -1,19 +1,8 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
-const BeerCard = ({
-  beerName,
-  factory,
-  bjcp,
-  untappd,
-  abv,
-  fg,
-  ibu,
-  pack,
-  date,
-  flavours,
-  disc,
-}) => {
-  const [showDisc, setShowDisc] = useState(false);
+const BeerCard = ({ beerName, factory, bjcp, untappd, abv, fg, ibu, pack, date, flavours, disc }) => {
+  const [ showDisc, setShowDisc ] = useState(false);
 
   return (
     <div className="beer-card">
@@ -48,12 +37,32 @@ const BeerCard = ({
         <div className="disc-head">Описание</div>
 
         {showDisc ? <div className="disc-text">{disc}</div> : null}
-        <span className="show-disc" onClick={() => setShowDisc(!showDisc)}>
+        <span
+          className="show-disc"
+          onClick={() => setShowDisc(!showDisc)}
+          onKeyDown={() => setShowDisc(!showDisc)}
+          role="button"
+          tabIndex={0}
+        >
           {showDisc ? 'Скрыть' : 'Показать'}
         </span>
       </div>
     </div>
   );
+};
+
+BeerCard.propTypes = {
+  beerName: PropTypes.string.isRequired,
+  factory: PropTypes.string.isRequired,
+  bjcp: PropTypes.string.isRequired,
+  untappd: PropTypes.string.isRequired,
+  abv: PropTypes.string.isRequired,
+  fg: PropTypes.string.isRequired,
+  ibu: PropTypes.string.isRequired,
+  pack: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  flavours: PropTypes.string.isRequired,
+  disc: PropTypes.string.isRequired
 };
 
 export default BeerCard;

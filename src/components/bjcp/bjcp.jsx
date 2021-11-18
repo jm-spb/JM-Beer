@@ -1,17 +1,18 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState } from 'react';
-// import firebase from '../../firebase';
-import db from '../../firebase';
+
+import './bjcp.scss';
+
 import { collection, getDocs } from 'firebase/firestore/lite';
 import Navbar from '../header/navbar';
 import Li from './li';
-import './bjcp.scss';
+
+import db from '../../firebase';
 
 const Bjcp = () => {
-  const [style, setStyle] = useState('');
-  const [disc, setDisc] = useState('');
-  const [loading, setLoading] = useState(false);
-
-  // const db = firebase.firestore();
+  const [ style, setStyle ] = useState('');
+  const [ disc, setDisc ] = useState('');
+  const [ loading, setLoading ] = useState(false);
 
   const beerCategory = [
     'Светлый лагер',
@@ -28,7 +29,7 @@ const Bjcp = () => {
     'Крепкий эль',
     'Пшеничное пиво',
     'Кислый эль',
-    'Особое пиво',
+    'Особое пиво'
   ];
 
   const showDisc = (doc) => {
@@ -86,13 +87,11 @@ const Bjcp = () => {
     setStyle('');
     const snap = getDocs(collection(db, e.target.innerText));
     snap.then((snapshot) => {
-      const list = snapshot.docs.map((doc) => {
-        return (
-          <li key={doc.id} onClick={() => showDisc(doc)}>
-            {doc.id}
-          </li>
-        );
-      });
+      const list = snapshot.docs.map((doc) => (
+        <li key={doc.id} onClick={() => showDisc(doc)} onKeyDown={() => showDisc(doc)}>
+          {doc.id}
+        </li>
+      ));
       setLoading(false);
       setStyle(list);
     });
@@ -110,9 +109,8 @@ const Bjcp = () => {
         <br />
         <br />
         <p>
-          <strong> BJCP (Beer Judge Certification Program)</strong> - Программа
-          сертификации пивных судей - некоммерческая организация, созданная в
-          1985 году с целью «пропаганды грамотности в пиве и повышения ценности
+          <strong> BJCP (Beer Judge Certification Program)</strong> - Программа сертификации пивных судей -
+          некоммерческая организация, созданная в 1985 году с целью «пропаганды грамотности в пиве и повышения ценности
           настоящего пива, а также признания навыков дегустации и оценки пива».
         </p>
         <p>
@@ -128,7 +126,8 @@ const Bjcp = () => {
         <div className="table">
           <div className="category">
             <span>Категория</span>
-            <ul onClick={showStyle}>
+
+            <ul onClick={showStyle} onKeyDown={showStyle} role="menu">
               <Li items={beerCategory} />
             </ul>
           </div>
@@ -144,37 +143,6 @@ const Bjcp = () => {
             <div className="disc-text">{disc}</div>
           </div>
         </div>
-        {/* <div className="bjcp-head">
-          <div className="head-category"></div>
-          <ol>
-            <li>Категория</li>
-            <li>Стиль</li>
-            <li className="column-3">Описание стиля</li>
-          </ol>
-        </div>
-        <div className="table-area">
-          <div className="flex">
-            
-            <div className="table-cells flex-column">
-              <ul onClick={showStyle}>{listCategory}</ul>
-            </div>
-          </div>
-
-         
-          <div id="style-column">
-            <div id="style" className="flex-column">
-              <ul>
-                {loading ? 'loading' : null}
-                {style}
-              </ul>
-            </div>
-          </div>
-
-          
-          <div id="discription" className="flex-column">
-            <div>{disc}</div>
-          </div>
-        </div> */}
       </section>
     </React.Fragment>
   );

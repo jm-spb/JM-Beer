@@ -1,5 +1,5 @@
 import React from 'react';
-// import './link.scss';
+import PropTypes from 'prop-types';
 
 const Link = ({ href, children }) => {
   const onClick = (e) => {
@@ -15,6 +15,11 @@ const Link = ({ href, children }) => {
       {children}
     </a>
   );
+};
+
+Link.propTypes = {
+  href: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired
 };
 
 export default Link;

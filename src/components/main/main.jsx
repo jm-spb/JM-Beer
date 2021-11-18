@@ -1,25 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import beerClassify from '../../assets/images/BEER.png';
-import beerClassify_thumbnail from '../../assets/images/BEER_thumbnail.webp';
-import Header from '../header/header';
 import { SRLWrapper } from 'simple-react-lightbox';
 import Aos from 'aos';
+
 import 'aos/dist/aos.css';
 import './main.scss';
+
+import Header from '../header/header';
 import BeerCardShort from './beer-card-short';
 
+import beerClassify from '../../assets/images/BEER.png';
+import beerClassifyThumbnail from '../../assets/images/BEER_thumbnail.webp';
+
 const Main = () => {
-  const [navTransparent, setNavTransparent] = useState('top');
+  const [ navTransparent, setNavTransparent ] = useState('top');
 
-  useEffect(() => {
-    window.onscroll = () => {
-      if (window.pageYOffset > 100) {
-        setNavTransparent('');
-      } else setNavTransparent('top');
+  useEffect(
+    () => {
+      window.onscroll = () => {
+        if (window.pageYOffset > 100) {
+          setNavTransparent('');
+        } else setNavTransparent('top');
 
-      Aos.init({ duration: 1500 });
-    };
-  }, [navTransparent]);
+        Aos.init({ duration: 1500 });
+      };
+    },
+    [ navTransparent ]
+  );
 
   return (
     <React.Fragment>
@@ -32,18 +38,12 @@ const Main = () => {
           <SRLWrapper>
             <div data-aos="fade-up" className="images">
               <a href={beerClassify}>
-                <img
-                  src={beerClassify_thumbnail}
-                  width="200"
-                  height="450"
-                  loading="lazy"
-                  alt="Классификация пива"
-                />
+                <img src={beerClassifyThumbnail} width="200" height="450" loading="lazy" alt="Классификация пива" />
               </a>
             </div>
           </SRLWrapper>
 
-          <div className="line2"></div>
+          <div className="line2" />
 
           <div data-aos="fade-up" className="home-heading">
             <h1 className="bottom-line">Последние дегустации</h1>
