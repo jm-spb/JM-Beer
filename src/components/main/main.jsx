@@ -14,14 +14,20 @@ import beerClassifyThumbnail from '../../assets/images/BEER_thumbnail.webp';
 const Main = () => {
   const [ navTransparent, setNavTransparent ] = useState('top');
 
+  const onScroll = () => {
+    if (window.pageYOffset > 100) {
+      setNavTransparent('');
+    } else setNavTransparent('top');
+
+    Aos.init({ duration: 1500 });
+  };
+
   useEffect(
     () => {
-      window.onscroll = () => {
-        if (window.pageYOffset > 100) {
-          setNavTransparent('');
-        } else setNavTransparent('top');
+      window.addEventListener('scroll', onScroll);
 
-        Aos.init({ duration: 1500 });
+      return () => {
+        window.removeEventListener('scroll', onScroll);
       };
     },
     [ navTransparent ]

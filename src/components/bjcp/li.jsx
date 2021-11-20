@@ -11,13 +11,7 @@ const Li = ({ items }) => {
   const renderedItems = items.map((item, index) => {
     const active = index === activeIndex ? 'clicked' : '';
     return (
-      <li
-        key={Math.random()}
-        className={active}
-        onClick={() => onClick(index)}
-        onKeyDown={() => onClick(index)}
-        role="menuitem"
-      >
+      <li key={item} className={active} onClick={() => onClick(index)} onKeyDown={() => onClick(index)} role="menuitem">
         {item}
       </li>
     );
